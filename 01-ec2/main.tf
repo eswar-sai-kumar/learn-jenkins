@@ -25,7 +25,7 @@ resource "aws_security_group" "ssh_sg" {
 # EC2 Instance
 resource "aws_instance" "ec2" {
   ami                         = "ami-09c813fb71547fc4f" # Amazon Linux 2 (us-east-1)
-  instance_type               = "t2.micro"
+  instance_type               = "t3.small"
   subnet_id                   = "subnet-026fa8e1dc737230f"
   vpc_security_group_ids      = [aws_security_group.ssh_sg.id]
   associate_public_ip_address = true
