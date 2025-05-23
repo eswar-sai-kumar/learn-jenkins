@@ -16,5 +16,10 @@ pipeline {
                 sh 'echo  this is deploying'
             }
         }
+        stage('Testing webhook'){
+            steps{
+                sh 'echo  this is for webhook testing'
+            }
+        }
     }
 }
